@@ -63,7 +63,7 @@
 $\epsilon$ = $\epsilon^{(1)}$ + $\epsilon^{(2)}\cdot\E$ + ...
 
 在无反演对称性的介质里，电光效应是由与$E_0$成正比的比例系数为$\epsilon^{(2)}$的项所支配，如本实验所用的KD*P晶体。
-KD*P晶体对称类型为$\overline{4}$2m晶类，电光系数矩阵为
+KD*P晶体对称类型为$\overline{4}$2m晶类，电光系数矩阵为:
 
 
 \[
@@ -223,112 +223,9 @@ A平行P时，当$V_{DP}$ = 1244V时，输出光极弱，示波器上观测到�
 
 
 \section{结论}
+本实验通过三种办法测半波电压得$V_{\pi2} = 6032V$，计算得电光系数$r_{63}$ = 15.3，并测得样品折射率差$\delta n = 0.0035$。
+通过这个实验对晶体的电光效应和涉及的相位变化有了更深刻的理解。
 
-首先要给出实验结果, 然后再给出由实验结果分析得到的结果和结论．
-此部分给出的内容要比摘要中的全面, 用词要更准确．
 
-\begin{acknowledgments}
-  感谢对实验和报告有具体重要帮助的, 又没被列为作者的人.
-  \note{撰写致谢时请使用 \env{acknowledgments} 环境.}
-\end{acknowledgments}
-
-% bibliography 的参数是你的 *.bib 文件去掉后缀名后的部分
-\bibliography{bibli}
-
-\clearpage % 附录前另起一页
-\appendix % 附录开始
-\section{思考题}\label{app:exercise}
-\subsection{可以把每道思考题的题目分别作为小标题}
-然后书写解答.
-
-\section{近代物理实验报告写作要求}
-
-物理实验的结果最终需要以论文或报告的形式向同行或公众报道.
-外界也主要基于这些论文或报告来评价一个实验物理工作者.
-所以, 课程实验报告的撰写是北大 ``近代物理实验'' 课的一个重要内容和主要的评分依据.
-
-北大近代物理实验课要求按研究论文的形式来撰写课程实验报告.
-和任何期刊一样, 近代物理实验课对学生提交的课程实验报告也有内容和格式上的要求.
-学生应依照课程提供的课程实验报告模板来撰写自己的实验报告.
-
-课程提供的课程实验报告模板综合了 American Institute of Physics (AIP) 期刊和中国《物理学报》对稿件格式的要求.
-
-本实验报告模板各部分的文字给出了相应节写作时应注意的问题.
-
-\subsection*{报告写作的一般事项}
-
-\begin{enumerate}
-  \item 课程实验报告应假定读者既不是已知全部实验细节的指导教师, 也不是缺少专业知识的公众, 而是同领域的实验研究者, 或审稿人.
-        不能要求读者要在读过课程讲义后才能读懂课程实验报告.
-  \item 文本和物理量单位用正体, 物理变量符号用斜体, 矢量矩阵符号用黑斜体.
-        \note{(\pkg{physics} 宏包提供了大量的方便的物理中常用符号的排版工具, 请参考其文档使用)}
-  \item 使用国际标准的缩略词, 符号和法定计量单位时应全文一致, 正文中的缩略
-        词在\textbf{首次出现时写出全称}, 后附缩略词, 并用括号括起; 之后直接用缩略词, 不
-        再写全称, 如 American Institute of Physics (AIP).
-  \item 全文标点符号除 ``顿号'' 外, 其他用英文半角标点符号.
-        \note{(推荐的格式中, 英文单词和数字应与汉字之间插入一个空格;
-          半角标点符号应如英文一般, 在逗号, 句号, 分号等后方插入一个空格;
-          在引号, 括号外侧各插入一个空格;
-          连续出现的标点符号之间的多余空格则应删除.
-          但是, \pkg{xeCJK} 宏包基本上自动为你在最终的 PDF 文稿中完成了这些事情.
-          此外, 如果你觉得半角符号配中文太丑, 请参见 \file{README.md} 中介绍的标点选项)}
-  \item 公式、图和表要分别用阿拉伯数字编列序号. \note{(这点 \LaTeX 可以为你代劳)}
-        公式和图表要达到可发表的质量.
-  \item 凡不是自己独立思考得到的内容都应该引参考文献.
-        不能大段引用同一参考文献.
-        对复杂问题, 应该优先考虑引用参考文献得到结果.
-        对简单一些的问题才鼓励独立思考.
-        只能引用正式出版物, 不能引用他人实验报告.
-  \item 模板中的未尽事项可以参考 AIP Style Manual 4th-edition (可从课程网站下载).
-        \note{(也可参考 \pkg[revtex]{revtex4-2} 的文档)}
-  \item 较长的推导和说明可以作为附件提交, 不占用报告篇幅.
-  \item 思考题不是报告的组成部分.
-        应另起一页附在报告的最后. \note{(比如作为附录)}
-\end{enumerate}
-
-\section{对 \LaTeX{} 中标点输入的额外说明}
-\LaTeX 中对 dash 有所区分,
-\begin{center}
-  \begin{tabular}{c@{\quad}c@{\ $\rightarrow$\ }c}
-    连字符 hyphen    & \verb|co-operate|     & co-operate \\
-    连接号 en-dash   & \verb|14--19|         & 14--19 \\
-    英文破折号 em-dash & \verb|Yes---or no?| & Yes---or no? \\
-    减号            & \verb|$-1$|           & $-1$ \\
-  \end{tabular}
-\end{center}
-中文破折号 (——) 就按一般习惯的用输入法输入即可.
-\note{其实中文破折号就是两个连着的 em-dash, 但两种输入方式使他们输出字体不同.}
-
-\LaTeX 中半角引号使用如下映射进行输入.
-左引号的符号为 \textsf{Esc} 键下方的锐音符.
-\begin{center}
-  \begin{tabular}{c@{\quad}c@{\ $\rightarrow$\ }c@{\quad}c@{\ $\rightarrow$\ }c}
-    单引号      & \verb|`|     & `     & \verb|'|     & ' \\
-    双引号      & \verb|``|    & ``    & \verb|''|    & '' \\
-    美式连续嵌套引号 & \verb|```|   & ```   & \verb|'{}''| & '{}'' \\
-    英式连续嵌套引号 & \verb|`{}``| & `{}`` & \verb|'''|   & ''' \\
-  \end{tabular}
-\end{center}
-注意其中 \code{\{\}} 起到的分组作用.
-
-此外, 如果想使用全角符号同时想使用实心点格式的句号, 可以使用 \code{quanjiao} 选项.
-源文档中的 ``。'' 会被自动替换成 ``．''.
-这时, 也就可以风格统一地直接使用中文输入法给出的引号 ``“”‘’'' 而不用管前面提到的映射了.
-具体请参见 \file{README.md} 中介绍的标点选项.
-
-\note{其实“和``以及”和''分别是同一个 Unicode 字符, 只是被分配了不同的字体.}
-
-\section{DIY 字体效果测试}
-
-\newcommand{\testword}{报告}
-\newcommand{\andbold}{\testword{}\textbf{\testword{}}}
-\newcommand{\testline}{\testword{}\emph{\andbold{}}\andbold{}}
-
-下面分别展示衬线, 无衬线和等宽中文字体效果, 便于检查基线高度等问题.
-\begin{center}
-  \textrm{\testline}\\
-  \textsf{\testline}\\
-  \texttt{\testline}
-\end{center}
 
 \end{document}
