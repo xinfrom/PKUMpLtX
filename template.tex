@@ -30,51 +30,73 @@
 
 \begin{document}
 
-\title{康普顿散射实验报告} % 切合报告内容, 简短明确, 可以不同于讲义
+\title{非线性对流斑图实验报告} % 切合报告内容, 简短明确, 可以不同于讲义
 \author{李钰欣} % 这里 \emailphone 一定要紧跟在 \author 后方
 \emailphone{2300011368@stu.pku.edu.cn}{(86)15816647600}
 % 如果改用 \email 则仅需要邮箱参数
 \affiliation{北京大学物理学院\quad 学号: 2300011368}
 % % 可以使用 \zhdate 自动生成中文日期, 如
-\date{\zhdate{2025/9/25}}
+\date{\zhdate{2025/10/16}}
 % % 也可使用 babel 的 \localedate, 如
 % \date{\localedate{2020}{12}{1}}
 % % 两者均会输出 `2020 年 12 月 1 日'
 % 下面的 \date 的参数是为了自动输出正确版本号, 正式报告请替换为上面的两种 \date 之一
 % \date{\releasedate}
 \begin{abstract}
-  本实验通过测量经过康普顿散射后不同角度下光子的光电峰峰位和光电峰面积，计算得到散射后光子的能量和微分散射截面。
-  通过本实验验证了康普顿散射效应，即散射后光子的能量会随角度变化，散射后光子的微分截面会随角度变化。
+本实验通过设置电流调整上下表面温差，并利用阴影法，得到不同温差、不同流体厚度下的对流斑图。
+通过本实验，对对流现象有了更深入的认识，也对耗散结构理论有了初步的了解。
+
 \end{abstract}
-\keywords{康普顿散射，NaI(Tl)探测器}
+\keywords{非线性热对流，耗散结构}
 
 \maketitle
 
 \section{引言}
 
-康普顿散射指的是入射光子与物质原子中的核外电子产生非弹性碰撞而被散射的过程。
-康普顿散射从实验上证实了光子是具有能量$E = \hbar \omega$和动量$p = \hbar k$的粒子，在微观的光子和电子的相互作用过程中，能量与动量守恒仍然成立。
+因热力作用使得流体状态（密度、压力等）发生差异可以引起流体运动，称为热对流。
+对具有自由面-固壁底层的流体薄层进行底层加热，可以观察到各种对流图形，称为斑图。
+本实验观测非线性热对流斑图，从而对耗散结构理论有一个初步的认识。
 
  
 \section{理论}\label{sec:theory}
-1.康普顿散射
+由NS方程、流体连续性方程、热传导方程，并假定存在微扰$T = T_0(z) + \theta$,$p = p_0(z) + p'$,$\mathbf{V} = \mathbf{u}$,
+代入方程组并作去量纲化可以得到：
 
-忽略电子的束缚能，视散射以前电子是静止的。由相对论的动量和能量守恒定律可以得到：
-$hv' = \frac{hv}{1+ frac{hv}{m_0 c^2}(1-cos \theta)}$
+\documentclass{article}
+\setlength\textwidth{245.0pt}
+\usepackage{CJK}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\begin{CJK*}{GBK}{song}
+\begin{document}
 
-2.康普顿散射的微分截面
+$$\left\{
+\begin{aligned}
+\sigma^{-1} (\frac{\partial u}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u}) = \theta z - \nabla \mathbf{p} + \nabla^2 \mathbf{u} \\
+\nabla \cdot \mathbf{u} = 0 \\
+\frac{\partial \theta}{\partial t} + \mathbf{u} \cdot \nabla \theta = Ra \omega + \nabla^2 \theta
+\end{aligned}
+\right.
+$$
 
-微分截面定义：一个能量为h$v$的入射$\gamma$光子与原子中的一个核外电子作用后散射到$\theta$方向单位立体角里的概率，记作$\frac{d \sigma (\theta)}{d \Omega}$
-本实验用NaIl（Tl）闪烁谱仪测量各散射角的散射$\gamma$光子能谱，由光电峰峰位及光电峰面积得出散射$\gamma$光子能量h$v'$，并计算出微分截面的相对值（相对$\theta = 20$°）
+\end{CJK*}
+\end{document} 
+
+其中边界条件为$\theta = u = 0$, $z = \pm \frac{1}{2}$,$Ra \equiv \frac{g \alpha d^3 \Delta T}{\kappa \gamma}$
+被称为瑞利数。
+
+通过数值计算结果显示有临界参量：$R_c = 1707.76, q_c = 3.117$，也就是说，当对流水层的上下温差使得瑞利数Ra<$R_c$时，系统保持定态解稳定；
+当Ra>$R_c$时，满足条件的部分扰动噪声就会逐渐变大，大到一定程度时，方程中的非线性项就不能忽略，进而得到的解可以理解实验结果的斑图分叉行为。
+
 
 \section{实验装置}
 实验装置示意图：见图1
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.85\linewidth]{fig/instrument2.jpg}
-  \caption{康普顿散射实验装置示意图}
-  \label{sec:instrument2}
+  \includegraphics[width=0.85\linewidth]{fig/instrument3.jpg}
+  \caption{非线性对流斑图实验装置示意图}
+  \label{sec:instrument3}
 \end{figure}
 
 主要装置：
