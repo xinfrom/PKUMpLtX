@@ -62,11 +62,13 @@
 由NS方程、流体连续性方程、热传导方程，并假定存在微扰$T = T_0(z) + \theta$,$p = p_0(z) + p'$,$\mathbf{V} = \mathbf{u}$,
 代入方程组并作去量纲化可以得到：
 
+$$
 \begin{cases}
-$\sigma^{-1} (\frac{\partial u}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u}) = \theta z - \nabla \mathbf{p} + \nabla^2 \mathbf{u}$ \\
-$\nabla \cdot \mathbf{u} = 0$ \\
-$\frac{\partial \theta}{\partial t} + \mathbf{u} \cdot \nabla \theta = Ra \omega + \nabla^2 \theta$
+\sigma^{-1} (\frac{\partial u}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u}) = \theta z - \nabla \mathbf{p} + \nabla^2 \mathbf{u} \\
+\nabla \cdot \mathbf{u} = 0 \\
+\frac{\partial \theta}{\partial t} + \mathbf{u} \cdot \nabla \theta = Ra \omega + \nabla^2 \theta
 \end{cases}
+$$
 
 其中边界条件为$\theta = u = 0$, $z = \pm \frac{1}{2}$,$Ra \equiv \frac{g \alpha d^3 \Delta T}{\kappa \gamma}$
 被称为瑞利数。
