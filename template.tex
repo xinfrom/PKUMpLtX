@@ -27,6 +27,7 @@
         {\mpltx@filedate, \mpltx@fileversion}}
 \makeatother
 % 以上是本文件为了方便额外定义的命令, 写报告时不需要.
+\usepackage{float}
 
 \begin{document}
 
@@ -68,7 +69,7 @@ STM分为两种工作模式：恒定电流模式和恒定高度模式，其中�
 \section{实验装置}
 实验装置示意图：见图1
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.5\linewidth]{fig/instrument4.jpg}
   \caption{STM示意图}
@@ -81,6 +82,14 @@ STM分为两种工作模式：恒定电流模式和恒定高度模式，其中�
 大于100V时逐步进针至100V再退针20步，小于100V时退针20步。
 
 \section{结果及讨论}
+最初设置偏压为1000mV，根据图像选择较平整区域，逐步缩小x、y电压范围来调整扫描范围，
+其中扫描时间与扫描范围呈线性关系。
+
+得到小范围的图像后，观察图像情况，若漂移明显或原子不清晰，可通过缩短扫描时间和降低偏压得到更清晰的图像，
+
+设置扫描时间100ms，偏压1000mV，扫描范围6V×6V时得到图2：
+
+
 1.实验数据
 水层为2mm时：
 
