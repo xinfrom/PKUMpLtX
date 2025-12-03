@@ -31,52 +31,48 @@
 
 \begin{document}
 
-\title{体效应振荡器的工作特性和波导管的工作状态实验报告} % 切合报告内容, 简短明确, 可以不同于讲义
+\title{约瑟夫森效应实验报告} % 切合报告内容, 简短明确, 可以不同于讲义
 \author{李钰欣} % 这里 \emailphone 一定要紧跟在 \author 后方
 \emailphone{2300011368@stu.pku.edu.cn}{(86)15816647600}
 % 如果改用 \email 则仅需要邮箱参数
 \affiliation{北京大学物理学院\quad 学号: 2300011368}
 % % 可以使用 \zhdate 自动生成中文日期, 如
-\date{\zhdate{2025/11/13}}
+\date{\zhdate{2025/11/27}}
 % % 也可使用 babel 的 \localedate, 如
 % \date{\localedate{2020}{12}{1}}
 % % 两者均会输出 `2020 年 12 月 1 日'
 % 下面的 \date 的参数是为了自动输出正确版本号, 正式报告请替换为上面的两种 \date 之一
 % \date{\releasedate}
 \begin{abstract}
-本实验通过观测体效应振荡器的工作特性、测量波导管的小驻波比、中驻波比和波导波长，
-掌握了测量微波相关重要参量的办法，并对体效应振荡器的结构和工作原理及波导管的工作原理有了进一步的认识。
+本实验通过测量含与不含双晶结的超导微桥的R-T曲线和伏安特性曲线，来加深对超导电性基本特性的理解，
+并进一步了解约瑟夫森效应的基本原理和加深对超导现象宏观量子性的理解。
+
 
 \end{abstract}
-\keywords{体效应振荡器，微波，波导管}
+\keywords{约瑟夫森效应，超导现象}
 
 \maketitle
 
 \section{引言}
-微波技术在科学研究中是一种重要的观测手段，其研究方法和测试设备都与无线电波不同。
-本实验目的在于：学习微波的基本知识和基本测量技术，并以微波为科学研究手段来观测物理现象。
-具体来讲，本实验通过观测体效应振荡器的工作特性来了解微波的产生，并通过波导管的使用来进一步掌握微波的性质。
+超导电性是低温物理的一个重要研究领域，从1911年首次发现超导电性现象以来，这一研究领域已诞生至少10位诺贝尔物理奖
+获得者。另外，1962年约瑟夫森预言了两块超导体被一薄绝缘层分开时库伯对的量子隧穿现象，即约瑟夫森效应。
+目前约瑟夫森效应已在灵敏探测、电压基准及量子线路等领域获得广泛应用。
 
 
  
 \section{理论}\label{sec:theory}
-体效应振荡器的工作基础是“耿效应”：在n型砷化镓单晶样品两端外加电场，会产生频率很高的电磁振荡，产生振荡的根本原因是
-部分半导体材料中具有双能谷结构，当外加电场高到一定程度时时会导致高场畴产生和消失的周期性变化。
+零电阻和完全抗磁性是超导性的两个基本特性，而超导电性的出现来自于超导体中库伯对的相干凝聚。
 
-波导管有三种工作状态：匹配状态、驻波状态和混波状态。自由空间波长$\lambda$，相速度$v_g$，
-波导波长$\lambda_g$，群速度$\mu$满足以下关系式：
+约瑟夫森效应指两块超导体被一薄绝缘层分开时库伯对的量子隧穿现象。当绝缘层足够薄时，两个超导体的波函数在绝缘层
+将存在一定的交叠。当结点压为0时，可以有一个很小的直流电流$I = I_C sin \phi$，这就是直流约瑟夫效应；
+当结点压不为0，仍存在有通过结的超导隧穿电流，这时电流为交变电流，频率为$\upsilon = 2 e V / h$，这就是交流
+约瑟夫效应。
 
-$$
-c = \lambda f
-$$
-$$
-v_g = \lambda_g f
-$$
-$$
-v_g \mu = c^2
-$$
+在探测交变约瑟夫森效应时，由于正弦交变电流对时间的平均值为0，在直流伏安特性曲线中是不可以直接观察到的。
+为证实交变约瑟夫森电流的存在，可用适当频率$\omega_1$的电磁波（如微波）来照射约瑟夫森结，可以证明
+当电压满足$V = n \frac{\hbar \omega_1}{2 e} = n \frac{h \upsilon_1}{2e}$时，约瑟夫森电流存在直流分量，
+伏安特性曲线上出现微博感应台阶（即夏皮罗台阶）
 
-定义驻波比$\rho = \frac{{|E|}_{max}}{{|E|}_{min}}$，通过降低反射可以使驻波比变小，也更接近匹配状态。
 
 
 \section{实验装置}
@@ -84,109 +80,119 @@ $$
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.5\linewidth]{fig/instrument5.jpg}
-  \caption{实验线路}
-  \label{sec:instrument5}
+  \includegraphics[width=0.5\linewidth]{fig/instrument6(1).jpg}
+  \caption{约瑟夫森效应测试装置实物图和结构示意图}
+  \label{sec:instrument6(1)}
 \end{figure}
 
-固态源提供微波信号，隔离器调节反射大小，衰减器调节微波振幅，单螺调配器调节驻波测量线终端位置。
+其中低温温度计为铂电阻温度计
 
-实验开始前需预热信号源30分钟。
-
-\section{结果及讨论}
-一、体效应振荡器的工作特性\vspace{0.5cm}
-
-测量0到13v时工作电流和8到13V的频率和相对功率（相对功率由检流计示数表示）。实验测得数据如下图所示：
+测量原理示意图如图2：
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\linewidth]{fig/data5(1).png}
-  \caption{体效应振荡器实验数据}
-  \label{sec:data5(1)}
+  \includegraphics[width=0.5\linewidth]{fig/instrument6(2).jpg}
+  \caption{测量原理}
+  \label{sec:instrument6(2)}
+\end{figure}
+
+
+\section{结果及讨论}
+一、不含双晶结的超导微桥测量结果\vspace{0.5cm}
+
+实验测得R-T曲线如下图所示：
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{fig/data6(1).png}
+  \caption{无双晶结的超导微桥R-T曲线}
+  \label{sec:data6(1)}
+\end{figure}
+
+根据测量数据查表可得，超导转变温度为：95K
+
+实验测得不加电压时V-I曲线如图：
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{fig/data6(2).png}
+  \caption{无双晶结的超导微桥直流V-I曲线}
+  \label{sec:data6(2)}
+\end{figure}
+
+由于定值电阻为50欧姆，计算得$I_C = 1 mA$
+
+加上微波和电压后，测得V-I曲线如图：
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{fig/data6(3).png}
+  \caption{无双晶结的超导微桥交流V-I曲线}
+  \label{sec:data6(3)}
 \end{figure}
 \vspace{1cm}
 
-二、观测波导管的工作状态\vspace{0.5cm}
+二、含双晶结的超导微桥测量结果\vspace{0.5cm}
 
-1、测量波导管的小驻波比
+第一次测量时$I_C$过大，得不到较好的曲线
 
-调节单螺调配器直至波导管为最佳匹配状态，实验数据如下表
-
-\begin{table}[!ht]
-    \centering
-    \caption{小驻波比实验数据}
-    \begin{tabular}{|l|l|l|}
-    \hline
-测量次数         & $I_max$         & $I_min$              \\  \hline
-1                 & 103               &87          \\ \hline
-2                & 101.5              &87             \\ \hline
-3                     & 103           &87              \\ \hline
-4                     & 104           &87.5              \\ \hline
-    \end{tabular}
-\end{table}
-
-检波晶体满足平方律，解得 $\rho$ = 1.087
-\vspace{0.2cm}
-
-2、测量波导管的中驻波比
-
-实验数据如下表
-
-\begin{table}[!ht]
-    \centering
-    \caption{中驻波比实验数据}
-    \begin{tabular}{|l|l|l|}
-    \hline
-测量次数         & $I_max$         & $I_min$              \\  \hline
-1                 & 103               &14          \\ \hline
-    \end{tabular}
-\end{table}
-
-计算得$\rho$ = 2.712
-\vspace{0.2cm}
-
-3、测量波导管的波导波长
-
-在频率为8.959GHz时，由检流计示数最小的左右两处得到的$x_1$、$x_2$取平均得到波节所在位置，邻近波节位置相减得到波导波长的一半。重复三次。
-
-实验数据如下所示：
-
-\begin{table}[!ht]
-    \centering
-    \caption{波导波长实验数据}
-    \begin{tabular}{|l|l|l|l|l|l|l|l|}
-    \hline
-序号         & $x_1 /mm$     & $x_2 /mm$   &$x_1' /mm$    & $x_2' /mm$   & $x_min /mm$   & $x_min' /mm$    & $\frac{\lambda_{g}}{2} /mm$    \\  \hline
-1            & 77.5          &81          &102.1         &105.5          & 79.25          &103.8             &24.55          \\ \hline
-2            & 102.1          &105.5          &126.7         &130.1       & 103.8       &128.4          &24.6         \\ \hline
-3            & 126.7          &130.1          &151.3         &154.6       & 128.4       &152.95          &24.55          \\ \hline
-    \end{tabular}
-\end{table}
-
-计算得$\lambda_g$ = 49.12mm
-\vspace{0.2cm}
-
-4、测量驻波曲线从而求晶体检波率n
-
-实验数据如下图：
+通过FIB-SEM对样品加工，加工前如图：
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\linewidth]{fig/data5(2).png}
-  \caption{晶体检波特性实验数据}
-  \label{sec:data5(2)}
+  \includegraphics[width=1\linewidth]{fig/image1.png}
+  \caption{加工前样品}
+  \label{sec:image1}
 \end{figure}
 
-由数据可知，电流为最大值一半时对应横轴宽度$\Delta l = 12.15mm$
+加工后如图：
 
-代入公式$n = \frac{-0.3010}{lg cos \frac{\pi \Delta l}{\lambda_g}}$得，检波率为2.0485。
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{fig/image2.png}
+  \caption{加工后样品}
+  \label{sec:image2}
+\end{figure}
+
+相当于削弱了超导电性，提高了电阻
+
+实验测得R-T曲线如下图所示：
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{fig/data6(4).png}
+  \caption{含双晶结的超导微桥R-T曲线}
+  \label{sec:data6(4)}
+\end{figure}
+
+根据测量数据查表可得，超导转变温度为：95K，说明有无双晶结不影响超导体本身的超导转变温度。
+
+
+加上微波和电压后，测得V-I曲线如图：
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{fig/data6(5).png}
+  \caption{含双晶结的超导微桥交流V-I曲线}
+  \label{sec:data6(5)}
+\end{figure}
+
+可以观察到明显的夏皮罗台阶，计算得$\upsilon = 10.16 GHz$
+
 
 
 
 \section{结论}
+本次实验中，我们使用高温超导体$Y Ba_2 Cu_3 O_{7-x}$,令两块材料在平行于衬底表面方向的晶向不同，并
+将其粘接在一起，构成双晶约瑟夫森结。实验中我们对比了该双晶约瑟夫森结与同尺寸同材料的超导微桥
+的电阻-温度曲线，发现二者的超导转变温度基本一致，这表明了二者在电阻-温度依赖方面的相似性。我们
+在不加电压的情况下观测伏安特性曲线，发现出现约瑟夫森临界电流。我们又在一定功率、频率的微波辐照条件下，
+观测到了明显的微波感应台阶现象，证明了交流约瑟夫森效应的存在，同时也利用台阶高度计算微波频率
+理论预测值。
 
-本实验通过测量和计算得到体效应振荡管的工作特性曲线、波导管的小驻波比和中驻波比、波导管的波导波长、晶体检波率，
-掌握了微波基本参量的测量方法和波导管的操作方法，并对体效应振荡器的结构和工作原理及波导管的工作原理有了更深入的了解。
+通过本实验，对约瑟夫森效应有了更深入的理解，也初步认识了如何用FIB-SEM加工约瑟夫森结。
+
+
 
 \end{document}
 
