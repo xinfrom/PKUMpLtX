@@ -101,101 +101,79 @@ ${p_1}^{(n)} = \frac{p_0 V_0 + {p_1}^{(n-1)} V_1}{V_0 + V_1}$
 
 
 \section{结果及讨论}
-一、不含双晶结的超导微桥测量结果\vspace{0.5cm}
+一、DL-8电离工作计正常工作状态的确认
 
-实验测得R-T曲线如下图所示：
+电离计处于${10}^{-1}$档时，万用表接收集极0和辅助极8时，发现示数为0，因此用开关连接辅助极与阴极。
+同理，电离计处于${10}^{-3}$档时，用开关连接辅助极与阳极。
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=1\linewidth]{fig/data6(1).png}
-  \caption{无双晶结的超导微桥R-T曲线}
-  \label{sec:data6(1)}
-\end{figure}
+各档位测得电压如下表：
 
-根据测量数据查表可得，超导转变温度为：95K
+\begin{table}[!ht]
+    \centering
+    \caption{小驻波比实验数据}
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+档位                  & 阳极               & 阴极               &辅助极             \\  \hline
+${10}^{0}$            & 167.1              &50.4               &50.9         \\ \hline
+${10}^{-1}$           & 167.4              &63.5               &62.4             \\ \hline
+${10}^{-2}$           & 162.1              &50.3               &50.9             \\ \hline
+${10}^{-3}$           & 167.1              &9.78               &166.8              \\ \hline
+    \end{tabular}
+\end{table}
 
-实验测得不加电压时V-I曲线如图：
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=1\linewidth]{fig/data6(2).png}
-  \caption{无双晶结的超导微桥直流V-I曲线}
-  \label{sec:data6(2)}
-\end{figure}
+二、压强测量实验结果
 
-由于定值电阻为50欧姆，计算得$I_C = 1 mA$
-
-加上微波和电压后，测得V-I曲线如图：
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=1\linewidth]{fig/data6(3).png}
-  \caption{无双晶结的超导微桥交流V-I曲线}
-  \label{sec:data6(3)}
-\end{figure}
-\vspace{1cm}
-
-二、含双晶结的超导微桥测量结果\vspace{0.5cm}
-
-第一次测量时$I_C$过大，得不到较好的曲线
-
-通过FIB-SEM对样品加工，加工前如图：
+测量结果如图3所示，其中横轴代表测量并计算得到的压强的自然对数，纵轴代表真空计示数的对数。
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\linewidth]{fig/image1.png}
-  \caption{加工前样品}
-  \label{sec:image1}
+  \includegraphics[width=1\linewidth]{fig/data7.png}
+  \caption{真空计校准实验数据}
+  \label{sec:data7}
 \end{figure}
 
-加工后如图：
+可以看到实验数据大致满足y=x的关系，分区间看会发现随着压强增大，斜率逐渐小于1。这说明压强变大时，计算得到的压强偏大
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=1\linewidth]{fig/image2.png}
-  \caption{加工后样品}
-  \label{sec:image2}
-\end{figure}
+原因分析：1、压强较低时每次取出的气体较少，p_0基本不变，压强较高时p_0的改变相较较大，不能当成常量迭代。
+2、实验仪器存在漏气现象，压强越大漏气越严重。
 
-相当于削弱了超导电性，提高了电阻
-
-实验测得R-T曲线如下图所示：
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=1\linewidth]{fig/data6(4).png}
-  \caption{含双晶结的超导微桥R-T曲线}
-  \label{sec:data6(4)}
-\end{figure}
-
-根据测量数据查表可得，超导转变温度为：95K，说明有无双晶结不影响超导体本身的超导转变温度。
-
-
-加上微波和电压后，测得V-I曲线如图：
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=1\linewidth]{fig/data6(5).png}
-  \caption{含双晶结的超导微桥交流V-I曲线}
-  \label{sec:data6(5)}
-\end{figure}
-
-可以观察到明显的夏皮罗台阶，计算得$\upsilon = 10.16 GHz$
-
+因此最高工作压强约为${10}^{0}$Torr。
 
 
 
 \section{结论}
-本次实验中，我们使用高温超导体$Y Ba_2 Cu_3 O_{7-x}$,令两块材料在平行于衬底表面方向的晶向不同，并
-将其粘接在一起，构成双晶约瑟夫森结。实验中我们对比了该双晶约瑟夫森结与同尺寸同材料的超导微桥
-的电阻-温度曲线，发现二者的超导转变温度基本一致，这表明了二者在电阻-温度依赖方面的相似性。我们
-在不加电压的情况下观测伏安特性曲线，发现出现约瑟夫森临界电流。我们又在一定功率、频率的微波辐照条件下，
-观测到了明显的微波感应台阶现象，证明了交流约瑟夫森效应的存在，同时也利用台阶高度计算微波频率
-理论预测值。
+本次实验通过一级膨胀法测量压强并对真空计进行校准。通过本实验，对真空的制造和真空度的测量技术有了更深入的
+认识，也初步掌握了真空计的使用方法和校准方法。另外，通过对实验曲线的分析，可以看到实验中漏气、$p_0$的变化等
+是如何影响测量结果的。
 
-通过本实验，对约瑟夫森效应有了更深入的理解，也初步认识了如何用FIB-SEM加工约瑟夫森结。
+\vspace{1.5cm}
 
+最后附上实验记录如图：
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{fig/note7(1).jpg}
+  \label{sec:note7(1)}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{fig/note7(1).jpg}
+  \label{sec:note7(2)}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{fig/note7(1).jpg}
+  \label{sec:note7(3)}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{fig/note7(1).jpg}
+  \label{sec:note7(3)}
+\end{figure}
 
 \end{document}
 
